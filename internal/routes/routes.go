@@ -1,3 +1,4 @@
+// routes/routes.go
 package routes
 
 import (
@@ -7,11 +8,14 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// Connect initializes the MongoDB connection
 func Connect() error {
 	return mongodb.Connect()
 }
 
+// RegisterRoutes defines and registers all routes for the application
 func RegisterRoutes(app *fiber.App) {
+	// Define routes for employee management
 	app.Get("/employee", employee.GetAllEmployees)
 	app.Post("/employee", employee.CreateEmployee)
 	app.Put("/employee/:id", employee.UpdateEmployee)

@@ -11,6 +11,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+// Employee represents the structure of an employee
 type Employee struct {
 	ID     primitive.ObjectID `json:"id,omitempty" bson:"_id,omitempty"`
 	Name   string             `json:"name"`
@@ -18,6 +19,7 @@ type Employee struct {
 	Age    float64            `json:"age"`
 }
 
+// GetAllEmployees retrieves all employees from the MongoDB database
 func GetAllEmployees(c *fiber.Ctx) error {
 	query := bson.D{}
 	cursor, err := mongodb.Mg.Db.Collection("employees").Find(c.Context(), query)
@@ -35,6 +37,7 @@ func GetAllEmployees(c *fiber.Ctx) error {
 	return c.JSON(employees)
 }
 
+// CreateEmployee creates a new employee record in the MongoDB database
 func CreateEmployee(c *fiber.Ctx) error {
 	collection := mongodb.Mg.Db.Collection("employees")
 
@@ -55,6 +58,7 @@ func CreateEmployee(c *fiber.Ctx) error {
 	return c.Status(201).JSON(employee)
 }
 
+// UpdateEmployee updates an existing employee record in the MongoDB database
 func UpdateEmployee(c *fiber.Ctx) error {
 	idParam := c.Params("id")
 
@@ -90,6 +94,7 @@ func UpdateEmployee(c *fiber.Ctx) error {
 	return c.Status(200).JSON(employee)
 }
 
+// DeleteEmployee deletes an employee record from the MongoDB database
 func DeleteEmployee(c *fiber.Ctx) error {
 	employeeID, err := primitive.ObjectIDFromHex(c.Params("id"))
 	if err != nil {
