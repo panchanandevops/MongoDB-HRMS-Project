@@ -4,6 +4,7 @@ The MongoDB Human Resource Management System aims to streamline employee data ma
 
 
 ## Project Overview Through A Diagram
+![](./Diagram/HRMS.png)
 
 ## Prerequisites
 Before you begin, ensure you have the following installed on your machine:
