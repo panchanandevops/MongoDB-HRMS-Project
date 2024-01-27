@@ -30,7 +30,6 @@ Make sure MongoDB is running, and update the connection details in `internal/mon
 
 ### 4. Run the Project
 ```bash
-cd cmd
 go run main.go
 ```
 
@@ -43,4 +42,10 @@ List and describe the available API endpoints and their functionalities.
 - **DELETE /employee/:id**: Delete an employee.
 
 
+## Run the application through Docker-Compose
 
+```bash
+docker compose -p Go-HRMS up --build -d
+```
+
+Here  `-p` for `--Project-name`.
