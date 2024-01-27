@@ -24,6 +24,6 @@ COPY --from=build /app/go-HRMS /go-HRMS
 
 USER nonroot
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD ["./go-HRMS"]
