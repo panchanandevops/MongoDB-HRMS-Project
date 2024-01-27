@@ -37,7 +37,7 @@ func GetAllEmployees(c *fiber.Ctx) error {
 	return c.JSON(employees)
 }
 
-// CreateEmployee creates a new employee record in the MongoDB database
+// CreateEmployee creates a new employee record inside the MongoDB database
 func CreateEmployee(c *fiber.Ctx) error {
 	collection := mongodb.Mg.Db.Collection("employees")
 

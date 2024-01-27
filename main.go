@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+
 	// Connect to MongoDB database
 	if err := routes.Connect(); err != nil {
 		log.Fatal(err)

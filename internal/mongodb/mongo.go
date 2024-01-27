@@ -22,6 +22,7 @@ const mongoURI = "mongodb://localhost:27017/" + dbName
 
 // Connect establishes a connection to the MongoDB database
 func Connect() error {
+
 	// Create a new MongoDB client with connection options
 	client, err := mongo.NewClient(options.Client().ApplyURI(mongoURI))
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)

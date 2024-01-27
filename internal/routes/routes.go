@@ -15,6 +15,7 @@ func Connect() error {
 
 // RegisterRoutes defines and registers all routes for the application
 func RegisterRoutes(app *fiber.App) {
+
 	// Define routes for employee management
 	app.Get("/employee", employee.GetAllEmployees)
 	app.Post("/employee", employee.CreateEmployee)
