@@ -45,7 +45,7 @@ List and describe the available API endpoints and their functionalities.
 ## Run the application through Docker-Compose
 
 ```bash
-docker compose -p Go-HRMS up --build -d
+docker compose -p go-hrms up --build -d
 ```
 
 Here  `-p` for `--Project-name`.
