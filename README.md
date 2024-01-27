@@ -41,11 +41,3 @@ List and describe the available API endpoints and their functionalities.
 - **PUT /employee/:id**: Update an existing employee.
 - **DELETE /employee/:id**: Delete an employee.
 
-
-## Run the application through Docker-Compose
-
-```bash
-docker compose -p go-hrms up --build -d
-```
-
-Here  `-p` for `--Project-name`.

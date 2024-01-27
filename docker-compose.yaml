@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  go-hrms:
-    image: panchanandevops/go-hrms:v1.0.0  # Replace with your Docker Hub username and image name
-    build:
-      context: .
-    ports:
-      - "3000:3000"
